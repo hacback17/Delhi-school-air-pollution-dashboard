@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 st.title("Delhi School Air Pollution Dashboard")
-st.caption("Estimated school exposure based on the nearest air-quality monitoring station in Delhi")
+st.caption("Estimated school exposure based on the nearest air-quality monitoring station in Delhi (for data 2025)")
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data" / "processed"

@@ -4,16 +4,19 @@ An interactive Streamlit dashboard that estimates school-level air pollution exp
 
 ## What this project does
 
-This project combines school location data with Delhi air-quality monitoring data to estimate how much pollution schools are likely exposed to. It is designed as a public-facing dashboard and analysis workflow, not just a notebook exercise.
+This project combines school location data with Delhi air-quality monitoring data (2025) to estimate how much pollution schools are likely exposed to. It is designed as a public-facing dashboard and analysis workflow, not just a notebook exercise.
 
 The pipeline:
 
-1. Builds a clean master list of Delhi monitoring stations.
+1. Builds a clean master list of Delhi monitoring stations (2025). Source: https://airquality.cpcb.gov.in/ccr/#/repository/data
 2. Ingests daily station pollution files and computes yearly pollutant summaries.
 3. Links each school to its nearest monitoring station using geographic distance.
 4. Produces district, school-type, and school-level exposure summaries.
 5. Serves the results through a Streamlit dashboard.
 
+Schools:
+1. https://www.edudel.nic.in/mis/eis/frmSchoolList.aspx?type=nTH2RniV/856b7vqlJz82MWFG0Y5sfJown1h2Tv10v0=
+2. https://www.edudel.nic.in/mis/eis/frmSchoolList.aspx?type=8v6AC39/z0ySjVIkvfDJzvxkdDvmSsz7pgALKMjL3UI=
 ## Main idea behind the exposure estimate
 
 The dashboard does **not** claim that pollution was directly measured inside each school campus.
