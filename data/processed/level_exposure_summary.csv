@@ -1,0 +1,17 @@
+SchoolLevel,school_count,avg_pm25,median_pm25,avg_pm10,avg_distance_km,max_distance_km
+Special School (Secondary),1,116.04,116.04,232.26,2.9,2.9
+Virtual School,1,109.88,109.88,201.49,0.52,0.52
+Special School (Sr.Secondary),3,103.14,101.46,199.32,1.71,2.18
+CM SHRI School (Nur-XII)(Sr.Secondary),37,102.44,108.24,211.03,2.69,7.91
+Special School (Primary),1,101.34,101.34,219.14,1.35,1.35
+Sarvodaya Sr.Secondary,453,99.51,101.34,208.79,2.56,10.92
+SOSE(Sr.Secondary),33,99.5,99.48,207.53,2.27,4.96
+Sr.Secondary,996,99.35,101.3,207.65,2.64,10.93
+Special School (Middle),2,98.79,98.79,205.46,1.93,2.51
+Sarvodaya Secondary,5,98.7,97.67,201.49,1.87,3.84
+Sarvodaya Middle,7,98.67,97.67,204.41,2.47,7.14
+CM SHRI School (VI-XII)(Sr.Secondary),38,97.16,97.67,202.46,2.43,7.18
+Secondary,340,96.08,96.23,202.68,2.82,11.34
+Middle,503,95.04,96.23,198.51,2.74,15.2
+Primary,2,90.16,90.16,211.47,1.12,1.73
+RPVV(Sr.Secondary),1,,,,2.21,2.21

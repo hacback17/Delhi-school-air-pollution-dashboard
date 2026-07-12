@@ -1,0 +1,316 @@
+country,state,city,station,last_update,latitude,longitude,pollutant_id,pollutant_min,pollutant_max,pollutant_avg
+India,Delhi,Delhi,"DTU, Delhi - CPCB","11-07-2026 18:00:00",28.7500499,77.1112615,PM10,28,301,139
+India,Delhi,Delhi,"DTU, Delhi - CPCB","11-07-2026 18:00:00",28.7500499,77.1112615,NH3,7,11,9
+India,Delhi,Delhi,"IIT Delhi, Delhi - IITM","11-07-2026 18:00:00",28.54246,77.191651,PM2.5,24,179,66
+India,Delhi,Delhi,"IIT Delhi, Delhi - IITM","11-07-2026 18:00:00",28.54246,77.191651,CO,15,21,19
+India,Delhi,Delhi,"R K Puram, Delhi - DPCC","11-07-2026 18:00:00",28.563262,77.186937,PM2.5,5,143,46
+India,Delhi,Delhi,"North Campus, DU, Delhi - IITM","11-07-2026 18:00:00",28.6573814,77.1585447,PM10,51,387,163
+India,Delhi,Delhi,"North Campus, DU, Delhi - IITM","11-07-2026 18:00:00",28.6573814,77.1585447,NO2,30,133,66
+India,Delhi,Delhi,"North Campus, DU, Delhi - IITM","11-07-2026 18:00:00",28.6573814,77.1585447,CO,61,74,66
+India,Delhi,Delhi,"IMD Lodhi Road, Delhi - IITM","11-07-2026 18:00:00",28.5918245,77.2273074,NO2,2,20,8
+India,Delhi,Delhi,"IMD Lodhi Road, Delhi - IITM","11-07-2026 18:00:00",28.5918245,77.2273074,SO2,NA,NA,NA
+India,Delhi,Delhi,"IMD Lodhi Road, Delhi - IITM","11-07-2026 18:00:00",28.5918245,77.2273074,OZONE,22,45,35
+India,Delhi,Delhi,"Narela, Delhi - DPCC","11-07-2026 18:00:00",28.822836,77.101981,NO2,10,24,16
+India,Delhi,Delhi,"Pusa, Delhi - IITM","11-07-2026 18:00:00",28.63611,77.173332,NO2,32,100,55
+India,Delhi,Delhi,"Pusa, Delhi - IITM","11-07-2026 18:00:00",28.63611,77.173332,NH3,NA,NA,NA
+India,Delhi,Delhi,"Pusa, Delhi - IITM","11-07-2026 18:00:00",28.63611,77.173332,SO2,NA,NA,NA
+India,Delhi,Delhi,"Sonia Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.710508,77.249485,PM10,20,389,155
+India,Delhi,Delhi,"Sonia Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.710508,77.249485,NH3,12,15,13
+India,Delhi,Delhi,"Sonia Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.710508,77.249485,SO2,0,7,2
+India,Delhi,Delhi,"Sonia Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.710508,77.249485,CO,35,39,37
+India,Delhi,Delhi,"Bawana, Delhi - DPCC","11-07-2026 18:00:00",28.7762,77.051074,NH3,5,14,10
+India,Delhi,Delhi,"Patparganj, Delhi - DPCC","11-07-2026 18:00:00",28.623763,77.287209,SO2,2,4,3
+India,Delhi,Delhi,"Jawaharlal Nehru Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.58028,77.233829,SO2,1,10,6
+India,Delhi,Delhi,"Najafgarh, Delhi - DPCC","11-07-2026 18:00:00",28.570173,76.933762,OZONE,12,19,15
+India,Delhi,Delhi,"Mundka, Delhi - DPCC","11-07-2026 18:00:00",28.684678,77.076574,PM2.5,13,107,54
+India,Delhi,Delhi,"Mundka, Delhi - DPCC","11-07-2026 18:00:00",28.684678,77.076574,NH3,6,9,7
+India,Delhi,Delhi,"Wazirpur, Delhi - DPCC","11-07-2026 18:00:00",28.699793,77.165453,NO2,28,61,39
+India,Delhi,Delhi,"Wazirpur, Delhi - DPCC","11-07-2026 18:00:00",28.699793,77.165453,SO2,8,11,9
+India,Delhi,Delhi,"Dr. Karni Singh Shooting Range, Delhi - DPCC","11-07-2026 18:00:00",28.498571,77.26484,NO2,10,57,26
+India,Delhi,Delhi,"Dwarka-Sector 8, Delhi - DPCC ","11-07-2026 18:00:00",28.5710274,77.0719006,PM10,53,410,193
+India,Delhi,Delhi,"Dwarka-Sector 8, Delhi - DPCC ","11-07-2026 18:00:00",28.5710274,77.0719006,SO2,1,7,3
+India,Delhi,Delhi,"Rohini, Delhi - DPCC","11-07-2026 18:00:00",28.732528,77.11992,PM2.5,20,92,56
+India,Delhi,Delhi,"Rohini, Delhi - DPCC","11-07-2026 18:00:00",28.732528,77.11992,CO,40,45,42
+India,Delhi,Delhi,"Rohini, Delhi - DPCC","11-07-2026 18:00:00",28.732528,77.11992,OZONE,4,7,6
+India,Delhi,Delhi,"Vivek Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.672342,77.31526,SO2,7,12,9
+India,Delhi,Delhi,"Major Dhyan Chand National Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.611281,77.237738,NO2,16,59,34
+India,Delhi,Delhi,"Pusa, Delhi - DPCC","11-07-2026 18:00:00",28.639652,77.146275,SO2,2,11,7
+India,Delhi,Delhi,"Narela, Delhi - DPCC","11-07-2026 18:00:00",28.822836,77.101981,SO2,15,22,17
+India,Delhi,Delhi,"Narela, Delhi - DPCC","11-07-2026 18:00:00",28.822836,77.101981,CO,39,98,69
+India,Delhi,Delhi,"CRRI Mathura Road, Delhi - IITM","11-07-2026 18:00:00",28.5512005,77.2735737,SO2,NA,NA,NA
+India,Delhi,Delhi,"Aya Nagar, Delhi - IITM","11-07-2026 18:00:00",28.4706914,77.1099364,SO2,NA,NA,NA
+India,Delhi,Delhi,"Aya Nagar, Delhi - IITM","11-07-2026 18:00:00",28.4706914,77.1099364,OZONE,22,44,35
+India,Delhi,Delhi,"NSIT Dwarka, Delhi - CPCB","11-07-2026 18:00:00",28.60909,77.0325413,PM10,45,141,76
+India,Delhi,Delhi,"NSIT Dwarka, Delhi - CPCB","11-07-2026 18:00:00",28.60909,77.0325413,NH3,6,15,8
+India,Delhi,Delhi,"NSIT Dwarka, Delhi - CPCB","11-07-2026 18:00:00",28.60909,77.0325413,SO2,10,22,15
+India,Delhi,Delhi,"NSUT Jaffarpur, Delhi - DPCC","11-07-2026 18:00:00",28.594004,76.909423,CO,40,43,42
+India,Delhi,Delhi,"Commonwealth Sports Complex, Delhi - DPCC","11-07-2026 18:00:00",28.615828,77.271992,OZONE,16,37,31
+India,Delhi,Delhi,"Shadipur, Delhi - CPCB","11-07-2026 18:00:00",28.6514781,77.1473105,NO2,32,263,65
+India,Delhi,Delhi,"Shadipur, Delhi - CPCB","11-07-2026 18:00:00",28.6514781,77.1473105,SO2,5,19,12
+India,Delhi,Delhi,"IGNOU_Maidan Garhi, Delhi - DPCC","11-07-2026 18:00:00",28.493624,77.201159,PM10,64,281,118
+India,Delhi,Delhi,"IGNOU_Maidan Garhi, Delhi - DPCC","11-07-2026 18:00:00",28.493624,77.201159,CO,26,28,27
+India,Delhi,Delhi,"Chandni Chowk, Delhi - IITM","11-07-2026 18:00:00",28.656756,77.227234,PM2.5,29,130,68
+India,Delhi,Delhi,"Mandir Marg, Delhi - DPCC","11-07-2026 18:00:00",28.636429,77.201067,PM2.5,20,210,77
+India,Delhi,Delhi,"Mandir Marg, Delhi - DPCC","11-07-2026 18:00:00",28.636429,77.201067,NO2,NA,NA,NA
+India,Delhi,Delhi,"Talkatora Garden, Delhi - DPCC","11-07-2026 18:00:00",28.62181,77.1944633,NH3,3,9,5
+India,Delhi,Delhi,"Commonwealth Sports Complex, Delhi - DPCC","11-07-2026 18:00:00",28.615828,77.271992,PM10,47,285,125
+India,Delhi,Delhi,"Commonwealth Sports Complex, Delhi - DPCC","11-07-2026 18:00:00",28.615828,77.271992,CO,NA,NA,NA
+India,Delhi,Delhi,"Punjabi Bagh, Delhi - DPCC","11-07-2026 18:00:00",28.674045,77.131023,PM10,94,405,176
+India,Delhi,Delhi,"Punjabi Bagh, Delhi - DPCC","11-07-2026 18:00:00",28.674045,77.131023,NH3,3,5,3
+India,Delhi,Delhi,"Punjabi Bagh, Delhi - DPCC","11-07-2026 18:00:00",28.674045,77.131023,SO2,7,58,41
+India,Delhi,Delhi,"Shadipur, Delhi - CPCB","11-07-2026 18:00:00",28.6514781,77.1473105,OZONE,32,38,35
+India,Delhi,Delhi,"IGNOU_Maidan Garhi, Delhi - DPCC","11-07-2026 18:00:00",28.493624,77.201159,OZONE,9,11,11
+India,Delhi,Delhi,"IGI Airport (T3), Delhi - IITM","11-07-2026 18:00:00",28.5627763,77.1180053,NO2,38,102,53
+India,Delhi,Delhi,"IGI Airport (T3), Delhi - IITM","11-07-2026 18:00:00",28.5627763,77.1180053,NH3,NA,NA,NA
+India,Delhi,Delhi,"Sirifort, Delhi - CPCB","11-07-2026 18:00:00",28.5504249,77.2159377,NH3,1,8,5
+India,Delhi,Delhi,"Sirifort, Delhi - CPCB","11-07-2026 18:00:00",28.5504249,77.2159377,SO2,20,25,21
+India,Delhi,Delhi,"Chandni Chowk, Delhi - IITM","11-07-2026 18:00:00",28.656756,77.227234,NH3,6,15,9
+India,Delhi,Delhi,"IMD Lodhi Road, Delhi - IITM","11-07-2026 18:00:00",28.5918245,77.2273074,PM2.5,20,165,60
+India,Delhi,Delhi,"Narela, Delhi - DPCC","11-07-2026 18:00:00",28.822836,77.101981,PM10,69,401,162
+India,Delhi,Delhi,"Narela, Delhi - DPCC","11-07-2026 18:00:00",28.822836,77.101981,OZONE,11,27,18
+India,Delhi,Delhi,"JNU, Delhi - DPCC","11-07-2026 18:00:00",28.540721,77.168544,OZONE,36,49,45
+India,Delhi,Delhi,"Aya Nagar, Delhi - IITM","11-07-2026 18:00:00",28.4706914,77.1099364,NH3,NA,NA,NA
+India,Delhi,Delhi,"Aya Nagar, Delhi - IITM","11-07-2026 18:00:00",28.4706914,77.1099364,CO,16,24,19
+India,Delhi,Delhi,"NSIT Dwarka, Delhi - CPCB","11-07-2026 18:00:00",28.60909,77.0325413,NO2,14,72,39
+India,Delhi,Delhi,"NSIT Dwarka, Delhi - CPCB","11-07-2026 18:00:00",28.60909,77.0325413,OZONE,16,46,26
+India,Delhi,Delhi,"NSUT Jaffarpur, Delhi - DPCC","11-07-2026 18:00:00",28.594004,76.909423,PM10,44,245,103
+India,Delhi,Delhi,"Major Dhyan Chand National Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.611281,77.237738,PM2.5,10,150,61
+India,Delhi,Delhi,"Major Dhyan Chand National Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.611281,77.237738,CO,6,14,12
+India,Delhi,Delhi,"Sonia Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.710508,77.249485,OZONE,9,13,11
+India,Delhi,Delhi,"Bawana, Delhi - DPCC","11-07-2026 18:00:00",28.7762,77.051074,PM2.5,27,143,81
+India,Delhi,Delhi,"Bawana, Delhi - DPCC","11-07-2026 18:00:00",28.7762,77.051074,PM10,85,370,174
+India,Delhi,Delhi,"Nehru Nagar, Delhi - DPCC","11-07-2026 18:00:00",28.56789,77.250515,PM10,48,355,164
+India,Delhi,Delhi,"Nehru Nagar, Delhi - DPCC","11-07-2026 18:00:00",28.56789,77.250515,NO2,20,50,32
+India,Delhi,Delhi,"Patparganj, Delhi - DPCC","11-07-2026 18:00:00",28.623763,77.287209,PM10,57,381,163
+India,Delhi,Delhi,"Patparganj, Delhi - DPCC","11-07-2026 18:00:00",28.623763,77.287209,OZONE,16,33,27
+India,Delhi,Delhi,"IHBAS, Dilshad Garden, Delhi - CPCB","11-07-2026 18:00:00",28.6811736,77.3025234,NO2,18,19,19
+India,Delhi,Delhi,"Sri Aurobindo Marg, Delhi - DPCC","11-07-2026 18:00:00",28.531346,77.190156,OZONE,15,30,23
+India,Delhi,Delhi,"Okhla Phase-2, Delhi - DPCC","11-07-2026 18:00:00",28.530785,77.271255,PM2.5,15,92,51
+India,Delhi,Delhi,"Okhla Phase-2, Delhi - DPCC","11-07-2026 18:00:00",28.530785,77.271255,PM10,51,354,154
+India,Delhi,Delhi,"Okhla Phase-2, Delhi - DPCC","11-07-2026 18:00:00",28.530785,77.271255,NO2,19,63,36
+India,Delhi,Delhi,"Okhla Phase-2, Delhi - DPCC","11-07-2026 18:00:00",28.530785,77.271255,CO,18,31,25
+India,Delhi,Delhi,"Rohini, Delhi - DPCC","11-07-2026 18:00:00",28.732528,77.11992,PM10,51,409,181
+India,Delhi,Delhi,"Vivek Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.672342,77.31526,PM10,69,407,179
+India,Delhi,Delhi,"Ashok Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.695381,77.181665,NH3,5,10,7
+India,Delhi,Delhi,"Ashok Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.695381,77.181665,CO,37,42,39
+India,Delhi,Delhi,"Dwarka-Sector 8, Delhi - DPCC ","11-07-2026 18:00:00",28.5710274,77.0719006,CO,19,33,24
+India,Delhi,Delhi,"DTU, Delhi - CPCB","11-07-2026 18:00:00",28.7500499,77.1112615,PM2.5,29,98,66
+India,Delhi,Delhi,"R K Puram, Delhi - DPCC","11-07-2026 18:00:00",28.563262,77.186937,NH3,5,6,5
+India,Delhi,Delhi,"North Campus, DU, Delhi - IITM","11-07-2026 18:00:00",28.6573814,77.1585447,NH3,NA,NA,NA
+India,Delhi,Delhi,"Vivek Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.672342,77.31526,NH3,5,6,5
+India,Delhi,Delhi,"Vivek Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.672342,77.31526,OZONE,34,46,39
+India,Delhi,Delhi,"Jahangirpuri, Delhi - DPCC","11-07-2026 18:00:00",28.73282,77.170633,SO2,9,19,16
+India,Delhi,Delhi,"Jahangirpuri, Delhi - DPCC","11-07-2026 18:00:00",28.73282,77.170633,CO,30,39,34
+India,Delhi,Delhi,"Najafgarh, Delhi - DPCC","11-07-2026 18:00:00",28.570173,76.933762,SO2,4,9,5
+India,Delhi,Delhi,"Najafgarh, Delhi - DPCC","11-07-2026 18:00:00",28.570173,76.933762,CO,30,32,30
+India,Delhi,Delhi,"Wazirpur, Delhi - DPCC","11-07-2026 18:00:00",28.699793,77.165453,NH3,5,6,6
+India,Delhi,Delhi,"Wazirpur, Delhi - DPCC","11-07-2026 18:00:00",28.699793,77.165453,CO,41,57,48
+India,Delhi,Delhi,"Wazirpur, Delhi - DPCC","11-07-2026 18:00:00",28.699793,77.165453,OZONE,16,18,17
+India,Delhi,Delhi,"Dr. Karni Singh Shooting Range, Delhi - DPCC","11-07-2026 18:00:00",28.498571,77.26484,PM10,44,378,163
+India,Delhi,Delhi,"Mandir Marg, Delhi - DPCC","11-07-2026 18:00:00",28.636429,77.201067,PM10,83,413,196
+India,Delhi,Delhi,"North Campus, DU, Delhi - IITM","11-07-2026 18:00:00",28.6573814,77.1585447,PM2.5,23,147,65
+India,Delhi,Delhi,"North Campus, DU, Delhi - IITM","11-07-2026 18:00:00",28.6573814,77.1585447,SO2,NA,NA,NA
+India,Delhi,Delhi,"Alipur, Delhi - DPCC","11-07-2026 18:00:00",28.815329,77.15301,PM2.5,13,123,59
+India,Delhi,Delhi,"Alipur, Delhi - DPCC","11-07-2026 18:00:00",28.815329,77.15301,PM10,34,416,173
+India,Delhi,Delhi,"Alipur, Delhi - DPCC","11-07-2026 18:00:00",28.815329,77.15301,SO2,2,5,4
+India,Delhi,Delhi,"IMD Lodhi Road, Delhi - IITM","11-07-2026 18:00:00",28.5918245,77.2273074,PM10,47,373,144
+India,Delhi,Delhi,"IMD Lodhi Road, Delhi - IITM","11-07-2026 18:00:00",28.5918245,77.2273074,NH3,NA,NA,NA
+India,Delhi,Delhi,"IMD Lodhi Road, Delhi - IITM","11-07-2026 18:00:00",28.5918245,77.2273074,CO,27,29,28
+India,Delhi,Delhi,"Burari Crossing, Delhi - IITM","11-07-2026 18:00:00",28.7256504,77.2011573,CO,37,43,41
+India,Delhi,Delhi,"Narela, Delhi - DPCC","11-07-2026 18:00:00",28.822836,77.101981,PM2.5,23,93,55
+India,Delhi,Delhi,"JNU, Delhi - DPCC","11-07-2026 18:00:00",28.540721,77.168544,NO2,7,47,24
+India,Delhi,Delhi,"CRRI Mathura Road, Delhi - IITM","11-07-2026 18:00:00",28.5512005,77.2735737,PM2.5,15,198,77
+India,Delhi,Delhi,"CRRI Mathura Road, Delhi - IITM","11-07-2026 18:00:00",28.5512005,77.2735737,PM10,80,415,197
+India,Delhi,Delhi,"CRRI Mathura Road, Delhi - IITM","11-07-2026 18:00:00",28.5512005,77.2735737,NO2,32,80,60
+India,Delhi,Delhi,"CRRI Mathura Road, Delhi - IITM","11-07-2026 18:00:00",28.5512005,77.2735737,NH3,NA,NA,NA
+India,Delhi,Delhi,"CRRI Mathura Road, Delhi - IITM","11-07-2026 18:00:00",28.5512005,77.2735737,OZONE,14,23,17
+India,Delhi,Delhi,"Aya Nagar, Delhi - IITM","11-07-2026 18:00:00",28.4706914,77.1099364,PM2.5,8,153,60
+India,Delhi,Delhi,"Aya Nagar, Delhi - IITM","11-07-2026 18:00:00",28.4706914,77.1099364,NO2,14,26,21
+India,Delhi,Delhi,"Nehru Nagar, Delhi - DPCC","11-07-2026 18:00:00",28.56789,77.250515,OZONE,24,35,31
+India,Delhi,Delhi,"Patparganj, Delhi - DPCC","11-07-2026 18:00:00",28.623763,77.287209,NO2,12,55,30
+India,Delhi,Delhi,"Jawaharlal Nehru Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.58028,77.233829,CO,33,35,34
+India,Delhi,Delhi,"IHBAS, Dilshad Garden, Delhi - CPCB","11-07-2026 18:00:00",28.6811736,77.3025234,PM10,12,500,207
+India,Delhi,Delhi,"Sri Aurobindo Marg, Delhi - DPCC","11-07-2026 18:00:00",28.531346,77.190156,PM2.5,20,75,49
+India,Delhi,Delhi,"Okhla Phase-2, Delhi - DPCC","11-07-2026 18:00:00",28.530785,77.271255,NH3,4,11,7
+India,Delhi,Delhi,"Okhla Phase-2, Delhi - DPCC","11-07-2026 18:00:00",28.530785,77.271255,SO2,4,6,5
+India,Delhi,Delhi,"Pusa, Delhi - IITM","11-07-2026 18:00:00",28.63611,77.173332,PM2.5,14,177,69
+India,Delhi,Delhi,"Pusa, Delhi - IITM","11-07-2026 18:00:00",28.63611,77.173332,OZONE,69,117,98
+India,Delhi,Delhi,"Anand Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.647622,77.315809,OZONE,4,6,5
+India,Delhi,Delhi,"DTU, Delhi - CPCB","11-07-2026 18:00:00",28.7500499,77.1112615,CO,15,23,18
+India,Delhi,Delhi,"DTU, Delhi - CPCB","11-07-2026 18:00:00",28.7500499,77.1112615,OZONE,11,21,16
+India,Delhi,Delhi,"IIT Delhi, Delhi - IITM","11-07-2026 18:00:00",28.54246,77.191651,PM10,84,454,210
+India,Delhi,Delhi,"IIT Delhi, Delhi - IITM","11-07-2026 18:00:00",28.54246,77.191651,SO2,NA,NA,NA
+India,Delhi,Delhi,"R K Puram, Delhi - DPCC","11-07-2026 18:00:00",28.563262,77.186937,PM10,61,391,157
+India,Delhi,Delhi,"R K Puram, Delhi - DPCC","11-07-2026 18:00:00",28.563262,77.186937,NO2,15,72,40
+India,Delhi,Delhi,"R K Puram, Delhi - DPCC","11-07-2026 18:00:00",28.563262,77.186937,SO2,2,112,30
+India,Delhi,Delhi,"Cantonment Area, Delhi - DPCC","11-07-2026 18:00:00",28.594169,77.1251,NO2,7,47,19
+India,Delhi,Delhi,"Cantonment Area, Delhi - DPCC","11-07-2026 18:00:00",28.594169,77.1251,CO,33,48,41
+India,Delhi,Delhi,"Sonia Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.710508,77.249485,PM2.5,2,120,64
+India,Delhi,Delhi,"Bawana, Delhi - DPCC","11-07-2026 18:00:00",28.7762,77.051074,OZONE,2,3,3
+India,Delhi,Delhi,"Nehru Nagar, Delhi - DPCC","11-07-2026 18:00:00",28.56789,77.250515,SO2,17,22,19
+India,Delhi,Delhi,"Rohini, Delhi - DPCC","11-07-2026 18:00:00",28.732528,77.11992,NH3,6,10,7
+India,Delhi,Delhi,"Vivek Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.672342,77.31526,CO,11,17,14
+India,Delhi,Delhi,"Jahangirpuri, Delhi - DPCC","11-07-2026 18:00:00",28.73282,77.170633,PM2.5,17,302,152
+India,Delhi,Delhi,"Jahangirpuri, Delhi - DPCC","11-07-2026 18:00:00",28.73282,77.170633,OZONE,9,11,10
+India,Delhi,Delhi,"Najafgarh, Delhi - DPCC","11-07-2026 18:00:00",28.570173,76.933762,PM2.5,12,98,48
+India,Delhi,Delhi,"Mundka, Delhi - DPCC","11-07-2026 18:00:00",28.684678,77.076574,SO2,1,11,4
+India,Delhi,Delhi,"Mundka, Delhi - DPCC","11-07-2026 18:00:00",28.684678,77.076574,OZONE,5,8,6
+India,Delhi,Delhi,"Wazirpur, Delhi - DPCC","11-07-2026 18:00:00",28.699793,77.165453,PM2.5,40,200,94
+India,Delhi,Delhi,"Anand Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.647622,77.315809,NO2,19,101,43
+India,Delhi,Delhi,"Chandni Chowk, Delhi - IITM","11-07-2026 18:00:00",28.656756,77.227234,OZONE,26,48,39
+India,Delhi,Delhi,"Mandir Marg, Delhi - DPCC","11-07-2026 18:00:00",28.636429,77.201067,NH3,6,6,6
+India,Delhi,Delhi,"Mandir Marg, Delhi - DPCC","11-07-2026 18:00:00",28.636429,77.201067,OZONE,15,24,20
+India,Delhi,Delhi,"Pusa, Delhi - DPCC","11-07-2026 18:00:00",28.639652,77.146275,PM2.5,20,103,58
+India,Delhi,Delhi,"Pusa, Delhi - DPCC","11-07-2026 18:00:00",28.639652,77.146275,CO,60,85,73
+India,Delhi,Delhi,"NSUT Jaffarpur, Delhi - DPCC","11-07-2026 18:00:00",28.594004,76.909423,NO2,5,28,12
+India,Delhi,Delhi,"NSUT Jaffarpur, Delhi - DPCC","11-07-2026 18:00:00",28.594004,76.909423,SO2,6,7,6
+India,Delhi,Delhi,"NSUT Jaffarpur, Delhi - DPCC","11-07-2026 18:00:00",28.594004,76.909423,OZONE,32,49,42
+India,Delhi,Delhi,"Talkatora Garden, Delhi - DPCC","11-07-2026 18:00:00",28.62181,77.1944633,PM10,37,262,117
+India,Delhi,Delhi,"Talkatora Garden, Delhi - DPCC","11-07-2026 18:00:00",28.62181,77.1944633,SO2,0,1,0
+India,Delhi,Delhi,"Shadipur, Delhi - CPCB","11-07-2026 18:00:00",28.6514781,77.1473105,PM2.5,22,64,35
+India,Delhi,Delhi,"IGNOU_Maidan Garhi, Delhi - DPCC","11-07-2026 18:00:00",28.493624,77.201159,SO2,3,4,3
+India,Delhi,Delhi,"IGI Airport (T3), Delhi - IITM","11-07-2026 18:00:00",28.5627763,77.1180053,PM10,61,320,143
+India,Delhi,Delhi,"DTU, Delhi - CPCB","11-07-2026 18:00:00",28.7500499,77.1112615,NO2,3,28,14
+India,Delhi,Delhi,"DTU, Delhi - CPCB","11-07-2026 18:00:00",28.7500499,77.1112615,SO2,NA,NA,NA
+India,Delhi,Delhi,"ITO, Delhi - CPCB","11-07-2026 18:00:00",28.628624,77.24106,PM2.5,17,79,54
+India,Delhi,Delhi,"ITO, Delhi - CPCB","11-07-2026 18:00:00",28.628624,77.24106,SO2,8,26,17
+India,Delhi,Delhi,"ITO, Delhi - CPCB","11-07-2026 18:00:00",28.628624,77.24106,CO,39,47,43
+India,Delhi,Delhi,"R K Puram, Delhi - DPCC","11-07-2026 18:00:00",28.563262,77.186937,CO,17,34,21
+India,Delhi,Delhi,"R K Puram, Delhi - DPCC","11-07-2026 18:00:00",28.563262,77.186937,OZONE,6,32,22
+India,Delhi,Delhi,"North Campus, DU, Delhi - IITM","11-07-2026 18:00:00",28.6573814,77.1585447,OZONE,36,72,56
+India,Delhi,Delhi,"Alipur, Delhi - DPCC","11-07-2026 18:00:00",28.815329,77.15301,NO2,11,34,21
+India,Delhi,Delhi,"Alipur, Delhi - DPCC","11-07-2026 18:00:00",28.815329,77.15301,NH3,12,28,17
+India,Delhi,Delhi,"Alipur, Delhi - DPCC","11-07-2026 18:00:00",28.815329,77.15301,OZONE,6,9,8
+India,Delhi,Delhi,"Burari Crossing, Delhi - IITM","11-07-2026 18:00:00",28.7256504,77.2011573,PM10,29,279,126
+India,Delhi,Delhi,"Burari Crossing, Delhi - IITM","11-07-2026 18:00:00",28.7256504,77.2011573,NO2,4,59,21
+India,Delhi,Delhi,"Burari Crossing, Delhi - IITM","11-07-2026 18:00:00",28.7256504,77.2011573,NH3,NA,NA,NA
+India,Delhi,Delhi,"Burari Crossing, Delhi - IITM","11-07-2026 18:00:00",28.7256504,77.2011573,OZONE,34,138,77
+India,Delhi,Delhi,"Major Dhyan Chand National Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.611281,77.237738,OZONE,8,15,12
+India,Delhi,Delhi,"Sonia Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.710508,77.249485,NO2,1,12,6
+India,Delhi,Delhi,"Nehru Nagar, Delhi - DPCC","11-07-2026 18:00:00",28.56789,77.250515,NH3,7,13,8
+India,Delhi,Delhi,"Nehru Nagar, Delhi - DPCC","11-07-2026 18:00:00",28.56789,77.250515,CO,4,7,5
+India,Delhi,Delhi,"Jawaharlal Nehru Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.58028,77.233829,NO2,2,53,11
+India,Delhi,Delhi,"Jawaharlal Nehru Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.58028,77.233829,NH3,26,49,34
+India,Delhi,Delhi,"Jawaharlal Nehru Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.58028,77.233829,OZONE,16,21,19
+India,Delhi,Delhi,"IHBAS, Dilshad Garden, Delhi - CPCB","11-07-2026 18:00:00",28.6811736,77.3025234,SO2,6,19,14
+India,Delhi,Delhi,"IHBAS, Dilshad Garden, Delhi - CPCB","11-07-2026 18:00:00",28.6811736,77.3025234,CO,41,54,47
+India,Delhi,Delhi,"Sri Aurobindo Marg, Delhi - DPCC","11-07-2026 18:00:00",28.531346,77.190156,NO2,15,127,49
+India,Delhi,Delhi,"Sri Aurobindo Marg, Delhi - DPCC","11-07-2026 18:00:00",28.531346,77.190156,SO2,0,46,12
+India,Delhi,Delhi,"Sri Aurobindo Marg, Delhi - DPCC","11-07-2026 18:00:00",28.531346,77.190156,CO,16,34,22
+India,Delhi,Delhi,"Dr. Karni Singh Shooting Range, Delhi - DPCC","11-07-2026 18:00:00",28.498571,77.26484,SO2,7,11,9
+India,Delhi,Delhi,"Dr. Karni Singh Shooting Range, Delhi - DPCC","11-07-2026 18:00:00",28.498571,77.26484,OZONE,18,30,26
+India,Delhi,Delhi,"Anand Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.647622,77.315809,PM2.5,29,301,146
+India,Delhi,Delhi,"Anand Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.647622,77.315809,PM10,106,485,318
+India,Delhi,Delhi,"Anand Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.647622,77.315809,SO2,8,24,16
+India,Delhi,Delhi,"Ashok Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.695381,77.181665,OZONE,4,8,7
+India,Delhi,Delhi,"Dwarka-Sector 8, Delhi - DPCC ","11-07-2026 18:00:00",28.5710274,77.0719006,PM2.5,10,85,37
+India,Delhi,Delhi,"Dwarka-Sector 8, Delhi - DPCC ","11-07-2026 18:00:00",28.5710274,77.0719006,NO2,10,43,19
+India,Delhi,Delhi,"Pusa, Delhi - IITM","11-07-2026 18:00:00",28.63611,77.173332,PM10,44,304,136
+India,Delhi,Delhi,"Okhla Phase-2, Delhi - DPCC","11-07-2026 18:00:00",28.530785,77.271255,OZONE,14,27,22
+India,Delhi,Delhi,"Rohini, Delhi - DPCC","11-07-2026 18:00:00",28.732528,77.11992,NO2,9,44,20
+India,Delhi,Delhi,"Vivek Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.672342,77.31526,PM2.5,30,113,64
+India,Delhi,Delhi,"Vivek Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.672342,77.31526,NO2,22,68,38
+India,Delhi,Delhi,"Najafgarh, Delhi - DPCC","11-07-2026 18:00:00",28.570173,76.933762,NO2,12,31,17
+India,Delhi,Delhi,"Mundka, Delhi - DPCC","11-07-2026 18:00:00",28.684678,77.076574,PM10,51,355,160
+India,Delhi,Delhi,"Mundka, Delhi - DPCC","11-07-2026 18:00:00",28.684678,77.076574,CO,33,36,35
+India,Delhi,Delhi,"Cantonment Area, Delhi - DPCC","11-07-2026 18:00:00",28.594169,77.1251,PM2.5,3,99,38
+India,Delhi,Delhi,"Pusa, Delhi - DPCC","11-07-2026 18:00:00",28.639652,77.146275,NH3,7,17,13
+India,Delhi,Delhi,"Pusa, Delhi - DPCC","11-07-2026 18:00:00",28.639652,77.146275,OZONE,5,7,6
+India,Delhi,Delhi,"Punjabi Bagh, Delhi - DPCC","11-07-2026 18:00:00",28.674045,77.131023,PM2.5,13,353,93
+India,Delhi,Delhi,"Punjabi Bagh, Delhi - DPCC","11-07-2026 18:00:00",28.674045,77.131023,NO2,12,37,22
+India,Delhi,Delhi,"Punjabi Bagh, Delhi - DPCC","11-07-2026 18:00:00",28.674045,77.131023,CO,27,37,32
+India,Delhi,Delhi,"Shadipur, Delhi - CPCB","11-07-2026 18:00:00",28.6514781,77.1473105,NH3,7,42,16
+India,Delhi,Delhi,"IGNOU_Maidan Garhi, Delhi - DPCC","11-07-2026 18:00:00",28.493624,77.201159,PM2.5,10,43,22
+India,Delhi,Delhi,"IGNOU_Maidan Garhi, Delhi - DPCC","11-07-2026 18:00:00",28.493624,77.201159,NO2,5,24,15
+India,Delhi,Delhi,"IGNOU_Maidan Garhi, Delhi - DPCC","11-07-2026 18:00:00",28.493624,77.201159,NH3,0,17,3
+India,Delhi,Delhi,"IGI Airport (T3), Delhi - IITM","11-07-2026 18:00:00",28.5627763,77.1180053,SO2,NA,NA,NA
+India,Delhi,Delhi,"IGI Airport (T3), Delhi - IITM","11-07-2026 18:00:00",28.5627763,77.1180053,OZONE,59,93,76
+India,Delhi,Delhi,"Sirifort, Delhi - CPCB","11-07-2026 18:00:00",28.5504249,77.2159377,PM2.5,43,192,86
+India,Delhi,Delhi,"Chandni Chowk, Delhi - IITM","11-07-2026 18:00:00",28.656756,77.227234,PM10,56,166,116
+India,Delhi,Delhi,"Chandni Chowk, Delhi - IITM","11-07-2026 18:00:00",28.656756,77.227234,NO2,16,77,31
+India,Delhi,Delhi,"Chandni Chowk, Delhi - IITM","11-07-2026 18:00:00",28.656756,77.227234,SO2,23,102,86
+India,Delhi,Delhi,"Chandni Chowk, Delhi - IITM","11-07-2026 18:00:00",28.656756,77.227234,CO,49,54,52
+India,Delhi,Delhi,"CRRI Mathura Road, Delhi - IITM","11-07-2026 18:00:00",28.5512005,77.2735737,CO,66,81,74
+India,Delhi,Delhi,"Aya Nagar, Delhi - IITM","11-07-2026 18:00:00",28.4706914,77.1099364,PM10,47,388,142
+India,Delhi,Delhi,"NSIT Dwarka, Delhi - CPCB","11-07-2026 18:00:00",28.60909,77.0325413,PM2.5,62,284,117
+India,Delhi,Delhi,"Talkatora Garden, Delhi - DPCC","11-07-2026 18:00:00",28.62181,77.1944633,CO,27,40,33
+India,Delhi,Delhi,"Commonwealth Sports Complex, Delhi - DPCC","11-07-2026 18:00:00",28.615828,77.271992,NO2,17,62,31
+India,Delhi,Delhi,"Major Dhyan Chand National Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.611281,77.237738,PM10,55,361,162
+India,Delhi,Delhi,"Major Dhyan Chand National Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.611281,77.237738,NH3,6,14,8
+India,Delhi,Delhi,"Major Dhyan Chand National Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.611281,77.237738,SO2,0,7,4
+India,Delhi,Delhi,"Bawana, Delhi - DPCC","11-07-2026 18:00:00",28.7762,77.051074,NO2,1,24,6
+India,Delhi,Delhi,"Bawana, Delhi - DPCC","11-07-2026 18:00:00",28.7762,77.051074,SO2,2,3,3
+India,Delhi,Delhi,"Bawana, Delhi - DPCC","11-07-2026 18:00:00",28.7762,77.051074,CO,34,46,39
+India,Delhi,Delhi,"Nehru Nagar, Delhi - DPCC","11-07-2026 18:00:00",28.56789,77.250515,PM2.5,38,160,79
+India,Delhi,Delhi,"Patparganj, Delhi - DPCC","11-07-2026 18:00:00",28.623763,77.287209,PM2.5,15,103,58
+India,Delhi,Delhi,"Patparganj, Delhi - DPCC","11-07-2026 18:00:00",28.623763,77.287209,NH3,5,7,6
+India,Delhi,Delhi,"Patparganj, Delhi - DPCC","11-07-2026 18:00:00",28.623763,77.287209,CO,30,33,32
+India,Delhi,Delhi,"Jawaharlal Nehru Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.58028,77.233829,PM2.5,45,95,73
+India,Delhi,Delhi,"Jawaharlal Nehru Stadium, Delhi - DPCC","11-07-2026 18:00:00",28.58028,77.233829,PM10,49,335,164
+India,Delhi,Delhi,"IHBAS, Dilshad Garden, Delhi - CPCB","11-07-2026 18:00:00",28.6811736,77.3025234,PM2.5,13,500,267
+India,Delhi,Delhi,"Ashok Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.695381,77.181665,PM2.5,27,117,66
+India,Delhi,Delhi,"Ashok Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.695381,77.181665,PM10,78,410,186
+India,Delhi,Delhi,"Ashok Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.695381,77.181665,NO2,9,35,21
+India,Delhi,Delhi,"Ashok Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.695381,77.181665,SO2,6,17,12
+India,Delhi,Delhi,"Dwarka-Sector 8, Delhi - DPCC ","11-07-2026 18:00:00",28.5710274,77.0719006,NH3,5,10,7
+India,Delhi,Delhi,"Dwarka-Sector 8, Delhi - DPCC ","11-07-2026 18:00:00",28.5710274,77.0719006,OZONE,15,22,17
+India,Delhi,Delhi,"IIT Delhi, Delhi - IITM","11-07-2026 18:00:00",28.54246,77.191651,NO2,15,68,38
+India,Delhi,Delhi,"IIT Delhi, Delhi - IITM","11-07-2026 18:00:00",28.54246,77.191651,NH3,NA,NA,NA
+India,Delhi,Delhi,"IIT Delhi, Delhi - IITM","11-07-2026 18:00:00",28.54246,77.191651,OZONE,32,44,40
+India,Delhi,Delhi,"ITO, Delhi - CPCB","11-07-2026 18:00:00",28.628624,77.24106,PM10,32,242,124
+India,Delhi,Delhi,"ITO, Delhi - CPCB","11-07-2026 18:00:00",28.628624,77.24106,NO2,19,108,60
+India,Delhi,Delhi,"ITO, Delhi - CPCB","11-07-2026 18:00:00",28.628624,77.24106,NH3,1,6,4
+India,Delhi,Delhi,"ITO, Delhi - CPCB","11-07-2026 18:00:00",28.628624,77.24106,OZONE,36,43,38
+India,Delhi,Delhi,"Alipur, Delhi - DPCC","11-07-2026 18:00:00",28.815329,77.15301,CO,22,26,23
+India,Delhi,Delhi,"Burari Crossing, Delhi - IITM","11-07-2026 18:00:00",28.7256504,77.2011573,PM2.5,6,150,63
+India,Delhi,Delhi,"Burari Crossing, Delhi - IITM","11-07-2026 18:00:00",28.7256504,77.2011573,SO2,NA,NA,NA
+India,Delhi,Delhi,"Narela, Delhi - DPCC","11-07-2026 18:00:00",28.822836,77.101981,NH3,5,10,7
+India,Delhi,Delhi,"JNU, Delhi - DPCC","11-07-2026 18:00:00",28.540721,77.168544,PM2.5,21,165,57
+India,Delhi,Delhi,"JNU, Delhi - DPCC","11-07-2026 18:00:00",28.540721,77.168544,PM10,60,289,119
+India,Delhi,Delhi,"JNU, Delhi - DPCC","11-07-2026 18:00:00",28.540721,77.168544,NH3,1,12,3
+India,Delhi,Delhi,"JNU, Delhi - DPCC","11-07-2026 18:00:00",28.540721,77.168544,SO2,0,2,1
+India,Delhi,Delhi,"JNU, Delhi - DPCC","11-07-2026 18:00:00",28.540721,77.168544,CO,11,16,14
+India,Delhi,Delhi,"NSIT Dwarka, Delhi - CPCB","11-07-2026 18:00:00",28.60909,77.0325413,CO,49,61,52
+India,Delhi,Delhi,"NSUT Jaffarpur, Delhi - DPCC","11-07-2026 18:00:00",28.594004,76.909423,PM2.5,29,101,55
+India,Delhi,Delhi,"NSUT Jaffarpur, Delhi - DPCC","11-07-2026 18:00:00",28.594004,76.909423,NH3,1,7,4
+India,Delhi,Delhi,"Talkatora Garden, Delhi - DPCC","11-07-2026 18:00:00",28.62181,77.1944633,PM2.5,24,103,53
+India,Delhi,Delhi,"IHBAS, Dilshad Garden, Delhi - CPCB","11-07-2026 18:00:00",28.6811736,77.3025234,NH3,6,6,6
+India,Delhi,Delhi,"IHBAS, Dilshad Garden, Delhi - CPCB","11-07-2026 18:00:00",28.6811736,77.3025234,OZONE,56,249,123
+India,Delhi,Delhi,"Sri Aurobindo Marg, Delhi - DPCC","11-07-2026 18:00:00",28.531346,77.190156,PM10,55,348,114
+India,Delhi,Delhi,"Sri Aurobindo Marg, Delhi - DPCC","11-07-2026 18:00:00",28.531346,77.190156,NH3,NA,NA,NA
+India,Delhi,Delhi,"Rohini, Delhi - DPCC","11-07-2026 18:00:00",28.732528,77.11992,SO2,6,7,7
+India,Delhi,Delhi,"Jahangirpuri, Delhi - DPCC","11-07-2026 18:00:00",28.73282,77.170633,PM10,117,433,239
+India,Delhi,Delhi,"Jahangirpuri, Delhi - DPCC","11-07-2026 18:00:00",28.73282,77.170633,NO2,16,48,28
+India,Delhi,Delhi,"Jahangirpuri, Delhi - DPCC","11-07-2026 18:00:00",28.73282,77.170633,NH3,2,6,6
+India,Delhi,Delhi,"Najafgarh, Delhi - DPCC","11-07-2026 18:00:00",28.570173,76.933762,PM10,48,274,136
+India,Delhi,Delhi,"Najafgarh, Delhi - DPCC","11-07-2026 18:00:00",28.570173,76.933762,NH3,5,8,6
+India,Delhi,Delhi,"Mundka, Delhi - DPCC","11-07-2026 18:00:00",28.684678,77.076574,NO2,76,105,89
+India,Delhi,Delhi,"Wazirpur, Delhi - DPCC","11-07-2026 18:00:00",28.699793,77.165453,PM10,117,453,248
+India,Delhi,Delhi,"Dr. Karni Singh Shooting Range, Delhi - DPCC","11-07-2026 18:00:00",28.498571,77.26484,PM2.5,10,93,44
+India,Delhi,Delhi,"Dr. Karni Singh Shooting Range, Delhi - DPCC","11-07-2026 18:00:00",28.498571,77.26484,NH3,5,8,6
+India,Delhi,Delhi,"Dr. Karni Singh Shooting Range, Delhi - DPCC","11-07-2026 18:00:00",28.498571,77.26484,CO,20,26,23
+India,Delhi,Delhi,"Anand Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.647622,77.315809,NH3,5,9,7
+India,Delhi,Delhi,"Anand Vihar, Delhi - DPCC","11-07-2026 18:00:00",28.647622,77.315809,CO,42,65,53
+India,Delhi,Delhi,"Pusa, Delhi - IITM","11-07-2026 18:00:00",28.63611,77.173332,CO,24,28,27
+India,Delhi,Delhi,"Cantonment Area, Delhi - DPCC","11-07-2026 18:00:00",28.594169,77.1251,PM10,33,251,104
+India,Delhi,Delhi,"Cantonment Area, Delhi - DPCC","11-07-2026 18:00:00",28.594169,77.1251,NH3,0,7,3
+India,Delhi,Delhi,"Cantonment Area, Delhi - DPCC","11-07-2026 18:00:00",28.594169,77.1251,SO2,3,10,6
+India,Delhi,Delhi,"Cantonment Area, Delhi - DPCC","11-07-2026 18:00:00",28.594169,77.1251,OZONE,25,38,33
+India,Delhi,Delhi,"Mandir Marg, Delhi - DPCC","11-07-2026 18:00:00",28.636429,77.201067,SO2,1,15,8
+India,Delhi,Delhi,"Mandir Marg, Delhi - DPCC","11-07-2026 18:00:00",28.636429,77.201067,CO,89,92,91
+India,Delhi,Delhi,"Pusa, Delhi - DPCC","11-07-2026 18:00:00",28.639652,77.146275,PM10,63,401,196
+India,Delhi,Delhi,"Pusa, Delhi - DPCC","11-07-2026 18:00:00",28.639652,77.146275,NO2,26,95,50
+India,Delhi,Delhi,"Talkatora Garden, Delhi - DPCC","11-07-2026 18:00:00",28.62181,77.1944633,NO2,9,40,20
+India,Delhi,Delhi,"Talkatora Garden, Delhi - DPCC","11-07-2026 18:00:00",28.62181,77.1944633,OZONE,15,26,22
+India,Delhi,Delhi,"Commonwealth Sports Complex, Delhi - DPCC","11-07-2026 18:00:00",28.615828,77.271992,PM2.5,25,110,62
+India,Delhi,Delhi,"Commonwealth Sports Complex, Delhi - DPCC","11-07-2026 18:00:00",28.615828,77.271992,NH3,2,6,3
+India,Delhi,Delhi,"Commonwealth Sports Complex, Delhi - DPCC","11-07-2026 18:00:00",28.615828,77.271992,SO2,7,11,8
+India,Delhi,Delhi,"Punjabi Bagh, Delhi - DPCC","11-07-2026 18:00:00",28.674045,77.131023,OZONE,1,11,5
+India,Delhi,Delhi,"Shadipur, Delhi - CPCB","11-07-2026 18:00:00",28.6514781,77.1473105,PM10,55,263,126
+India,Delhi,Delhi,"Shadipur, Delhi - CPCB","11-07-2026 18:00:00",28.6514781,77.1473105,CO,34,53,43
+India,Delhi,Delhi,"IGI Airport (T3), Delhi - IITM","11-07-2026 18:00:00",28.5627763,77.1180053,PM2.5,18,187,75
+India,Delhi,Delhi,"IGI Airport (T3), Delhi - IITM","11-07-2026 18:00:00",28.5627763,77.1180053,CO,34,36,35
+India,Delhi,Delhi,"Sirifort, Delhi - CPCB","11-07-2026 18:00:00",28.5504249,77.2159377,PM10,61,347,144
+India,Delhi,Delhi,"Sirifort, Delhi - CPCB","11-07-2026 18:00:00",28.5504249,77.2159377,NO2,4,24,12
+India,Delhi,Delhi,"Sirifort, Delhi - CPCB","11-07-2026 18:00:00",28.5504249,77.2159377,CO,1,5,2
+India,Delhi,Delhi,"Sirifort, Delhi - CPCB","11-07-2026 18:00:00",28.5504249,77.2159377,OZONE,13,23,17

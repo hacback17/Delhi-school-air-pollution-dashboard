@@ -1,0 +1,3 @@
+Type,school_count,avg_pm25,median_pm25,avg_pm10,avg_no2,avg_distance_km,max_distance_km,unique_stations_used
+Govt,1082,98.37,97.67,205.36,45.7,2.6,10.93,43
+Unaided,1341,97.77,97.67,205.06,44.73,2.7,15.2,44
