@@ -3,6 +3,7 @@ import pandas as pd
 from pathlib import Path
 import plotly.express as px
 
+
 st.set_page_config(
     page_title="Delhi School Air Pollution Dashboard",
     page_icon="🌫️",
@@ -12,8 +13,29 @@ st.set_page_config(
 st.title("Delhi School Air Pollution Dashboard")
 st.caption("Estimated school exposure based on the nearest air-quality monitoring station in Delhi (for data 2025)")
 
+st.markdown(
+    """
+    <style>
+    .red-asterisk {
+        color: #ff4b4b;
+        font-weight: 700;
+    }
+    .metric-note {
+        font-size: 0.9rem;
+        color: #b0b0b0;
+        margin-top: -0.25rem;
+        margin-bottom: 0.75rem;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data" / "processed"
+
+AVG_ENROLMENT_DELHI = 808
+ENROLMENT_SOURCE_URL = "https://education.economictimes.indiatimes.com/news/school-education/delhi-schools-face-infrastructure-strain-amid-rising-enrolment-report/129760660"
 
 
 @st.cache_data
@@ -23,6 +45,7 @@ def load_data():
 
 
 schools = load_data()
+
 
 # -----------------------------
 # Sidebar filters
@@ -48,9 +71,30 @@ if selected_type != "All school types":
 if selected_confidence != "All confidence levels":
     filtered_schools = filtered_schools[filtered_schools["exposure_confidence"] == selected_confidence]
 
+
 # -----------------------------
 # Helper formatting
 # -----------------------------
+def format_indian_number(n):
+    n = int(round(n))
+    s = str(n)
+    if len(s) <= 3:
+        return s
+    last3 = s[-3:]
+    rest = s[:-3]
+    parts = []
+    while len(rest) > 2:
+        parts.insert(0, rest[-2:])
+        rest = rest[:-2]
+    if rest:
+        parts.insert(0, rest)
+    return ",".join(parts + [last3])
+
+
+def estimate_students_affected(school_count, avg_enrolment=AVG_ENROLMENT_DELHI):
+    return int(round(school_count * avg_enrolment))
+
+
 def format_school_table(df, pollutant_col, pollutant_label):
     out = df.copy()
 
@@ -90,11 +134,20 @@ def format_district_table(df):
         "avg_pm25": "Average PM2.5 exposure",
         "avg_pm10": "Average PM10 exposure",
         "avg_no2": "Average NO2 exposure",
-        "avg_distance_km": "Average distance to station (km)"
+        "avg_distance_km": "Average distance to station (km)",
+        "estimated_students_affected": "Estimated students affected*"
     })
 
-    for col in ["Average PM2.5 exposure", "Average PM10 exposure", "Average NO2 exposure", "Average distance to station (km)"]:
+    for col in [
+        "Average PM2.5 exposure",
+        "Average PM10 exposure",
+        "Average NO2 exposure",
+        "Average distance to station (km)"
+    ]:
         out[col] = out[col].round(2)
+
+    if "Estimated students affected*" in out.columns:
+        out["Estimated students affected*"] = out["Estimated students affected*"].apply(format_indian_number)
 
     out = out.reset_index(drop=True)
     out.index = out.index + 1
@@ -108,6 +161,12 @@ if filtered_schools.empty:
     st.warning("No schools match the current filter selection.")
     st.stop()
 
+total_schools = len(schools)
+schools_in_view = len(filtered_schools)
+total_students_affected = estimate_students_affected(total_schools)
+students_affected_in_view = estimate_students_affected(schools_in_view)
+filters_active = total_schools != schools_in_view
+
 highest_pm25_value = filtered_schools["PM2.5 (µg/m³)_mean"].max()
 highest_pm10_value = filtered_schools["PM10 (µg/m³)_mean"].max()
 highest_no2_value = filtered_schools["NO2 (µg/m³)_mean"].max()
@@ -120,13 +179,14 @@ highest_pm25_station = filtered_schools[
     filtered_schools["PM2.5 (µg/m³)_mean"] == highest_pm25_value
 ]["nearest_station_name"].iloc[0]
 
+
 # -----------------------------
 # KPI cards
 # -----------------------------
 st.subheader("Overview")
 
 col1, col2, col3, col4 = st.columns(4)
-col1.metric("Schools in this view", f"{len(filtered_schools):,}")
+col1.metric("Schools in this view", format_indian_number(schools_in_view))
 col2.metric("Districts covered", filtered_schools["District"].nunique())
 col3.metric("Monitoring stations linked", filtered_schools["nearest_station_id"].nunique())
 col4.metric("Average PM2.5 exposure", f"{filtered_schools['PM2.5 (µg/m³)_mean'].mean():.1f} µg/m³")
@@ -137,7 +197,36 @@ col6.metric("Average NO2 exposure", f"{filtered_schools['NO2 (µg/m³)_mean'].me
 col7.metric("Average station distance", f"{filtered_schools['distance_km'].mean():.2f} km")
 col8.metric("Farthest school from station", f"{filtered_schools['distance_km'].max():.2f} km")
 
+student_col1, student_col2 = st.columns(2)
+student_col1.metric(
+    "Students Affected*",
+    format_indian_number(students_affected_in_view)
+)
+student_col2.metric(
+    "Students Affected (full dataset)",
+    format_indian_number(total_students_affected)
+)
+
+st.markdown(
+    '<div class="metric-note"><span class="red-asterisk">*</span> Estimated using average enrolment of 808 students per school.</div>',
+    unsafe_allow_html=True
+)
+
+if filters_active:
+    st.info(
+        f"Filters are active. The current view contains {format_indian_number(schools_in_view)} schools, "
+        f"which corresponds to an estimated {format_indian_number(students_affected_in_view)} students affected*. "
+        f"The full dataset reference remains {format_indian_number(total_students_affected)} students across "
+        f"{format_indian_number(total_schools)} schools."
+    )
+else:
+    st.info(
+        f"No filters are active. The current view includes all {format_indian_number(total_schools)} schools in the dashboard, "
+        f"corresponding to an estimated {format_indian_number(total_students_affected)} students affected*."
+    )
+
 st.markdown("---")
+
 
 # -----------------------------
 # Story highlights
@@ -149,8 +238,10 @@ st.markdown(
 - **Highest estimated PM2.5 exposure in this view:** **{highest_pm25_value:.1f} µg/m³**
 - **Nearest monitoring station behind that estimate:** **{highest_pm25_station}**
 - **Schools linked to that highest PM2.5 estimate:** **{", ".join(highest_pm25_schools[:5])}**
+- **Estimated students represented in this view\\*:** **{format_indian_number(students_affected_in_view)}**
 """
 )
+
 
 # -----------------------------
 # District chart
@@ -168,8 +259,10 @@ district_filtered = (
         avg_distance_km=("distance_km", "mean")
     )
     .reset_index()
-    .sort_values("avg_pm25", ascending=False)
 )
+
+district_filtered["estimated_students_affected"] = district_filtered["school_count"].apply(estimate_students_affected)
+district_filtered = district_filtered.sort_values("avg_pm25", ascending=False)
 
 fig_district = px.bar(
     district_filtered.head(10),
@@ -179,11 +272,20 @@ fig_district = px.bar(
     labels={
         "avg_pm25": "Average PM2.5 exposure",
         "District": "District"
+    },
+    hover_data={
+        "school_count": True,
+        "estimated_students_affected": True,
+        "avg_pm25": ":.2f",
+        "avg_pm10": ":.2f",
+        "avg_no2": ":.2f",
+        "avg_distance_km": ":.2f"
     }
 )
 st.plotly_chart(fig_district, use_container_width=True)
 
 st.dataframe(format_district_table(district_filtered), use_container_width=True)
+
 
 # -----------------------------
 # Top PM2.5 schools
@@ -205,6 +307,7 @@ st.dataframe(
     use_container_width=True
 )
 
+
 # -----------------------------
 # Top PM10 schools
 # -----------------------------
@@ -225,6 +328,7 @@ st.dataframe(
     use_container_width=True
 )
 
+
 # -----------------------------
 # Top NO2 schools
 # -----------------------------
@@ -244,6 +348,7 @@ st.dataframe(
     ),
     use_container_width=True
 )
+
 
 # -----------------------------
 # Monitoring gap schools
@@ -273,6 +378,7 @@ gap_table.index = gap_table.index + 1
 
 st.dataframe(gap_table, use_container_width=True)
 
+
 # -----------------------------
 # Method note
 # -----------------------------
@@ -284,4 +390,31 @@ st.info(
     "The pollution data comes from daily 2025 readings collected at Delhi air-quality monitoring stations operated by CPCB, DPCC, and IITM. "
     "Each school was linked to its nearest monitoring station using latitude and longitude coordinates, and the station's yearly mean pollution levels "
     "were assigned as the school's estimated exposure."
+)
+
+st.markdown(
+    f"""
+<div style="
+    margin-top: 0.75rem;
+    padding: 0.9rem 1rem;
+    border-left: 4px solid #9aa0a6;
+    background-color: rgba(240, 242, 246, 0.6);
+    border-radius: 0.4rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+">
+<b>Dashboard note:</b> Student counts marked with <span style="color:#ff4b4b; font-weight:700;">*</span> are estimated using a Delhi-wide
+average enrolment of <b>{AVG_ENROLMENT_DELHI}</b> students per school. This figure comes from reporting
+that Delhi has <b>5,556 schools</b> serving <b>more than 44.9 lakh students</b>, which corresponds to an
+average enrolment of <b>{AVG_ENROLMENT_DELHI}</b> students per school.<br><br>
+
+<b>How we calculated it:</b><br>
+- Without filters: <b>Total schools in dashboard × {AVG_ENROLMENT_DELHI}</b><br>
+- With filters applied: <b>Schools in current filtered view × {AVG_ENROLMENT_DELHI}</b><br><br>
+
+This is an estimated student exposure proxy, not school-wise observed enrolment data.<br>
+<b>Source:</b> <a href="{ENROLMENT_SOURCE_URL}" target="_blank">ET Education</a>
+</div>
+""",
+    unsafe_allow_html=True
 )
