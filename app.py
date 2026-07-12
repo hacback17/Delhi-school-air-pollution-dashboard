@@ -3,6 +3,8 @@ import pandas as pd
 from pathlib import Path
 import plotly.express as px
 
+st.write("App started successfully")
+
 st.set_page_config(
     page_title="Delhi School Air Pollution Dashboard",
     page_icon="🌫️",
