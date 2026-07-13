@@ -842,21 +842,25 @@ def render_analyst_dashboard_tab(filters: dict):
     st.subheader("How to read this dashboard")
 
     st.info(
-        "These school-level pollution values are estimated exposure proxies, not direct measurements taken inside school campuses. "
-        "The pollution data comes from daily 2025 readings collected at Delhi air-quality monitoring stations operated by CPCB, DPCC, and IITM. "
-        "Each school was linked to its nearest monitoring station using latitude and longitude coordinates. "
-        "For this seasonal dashboard, station pollution values were aggregated by season and assigned as each school's estimated exposure proxy for that season."
+        "This is not a live pollution tracker. It uses historical air-quality data from 2025 to show a one-year picture of estimated school exposure across Delhi."
     )
 
     st.info(
-        f"Dashboard note: Student counts marked with * are estimated using a Delhi-wide average enrolment of "
-        f"{AVG_ENROLMENT_DELHI} students per school. This figure comes from reporting that Delhi has 5,556 schools "
-        f"serving more than 44.9 lakh students, which corresponds to an average enrolment of {AVG_ENROLMENT_DELHI} "
-        f"students per school.\n\n"
-        f"How we calculated it:\n"
-        f"- Without filters: Total schools in dashboard × {AVG_ENROLMENT_DELHI}\n"
-        f"- With filters applied: Schools in current filtered view × {AVG_ENROLMENT_DELHI}\n\n"
-        f"This is an estimated student exposure proxy, not school-wise observed enrolment data.\n"
+        "The school-level pollution values shown here are estimated exposure proxies, not pollution measured directly inside school campuses. "
+        "Each school was linked to its nearest air-quality monitoring station in Delhi, and the station's seasonal pollution levels were used as the school's estimated exposure for that season."
+    )
+
+    st.info(
+        "The pollution data comes from daily 2025 readings recorded at Delhi monitoring stations operated by CPCB, DPCC, and IITM. "
+        "These readings were grouped by season and then assigned to schools using nearest-station matching based on latitude and longitude."
+    )
+
+    st.info(
+        f"Student counts marked with * are estimated using an average enrolment of {AVG_ENROLMENT_DELHI} students per school. "
+        f"This estimate is based on city-level reporting, not actual enrolment for each individual school.\n\n"
+        f"How it was calculated:\n"
+        f"- Full dataset: total schools × {AVG_ENROLMENT_DELHI}\n"
+        f"- Filtered view: schools in the current view × {AVG_ENROLMENT_DELHI}\n\n"
         f"Source: {ENROLMENT_SOURCE_URL}"
     )
 
