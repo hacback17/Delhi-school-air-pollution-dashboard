@@ -864,9 +864,9 @@ def render_analyst_dashboard_tab(filters: dict):
 def main():
     load_css()
 
-    st.title("Delhi School Air Pollution Dashboard")
+    st.title("Delhi School Air Pollution Dashboard (2025)")
     st.caption(
-        "Parent-facing school lookup plus full analyst dashboard with Delhi school exposure filters."
+        "Based on historical air-quality data from 2025. This dashboard is a one-year analytical snapshot and is not updated in real time."
     )
 
     view = st.radio(
