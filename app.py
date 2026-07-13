@@ -25,8 +25,6 @@ SEASON_LABELS = {
     "Post-Monsoon": "post_monsoon"
 }
 
-SEASON_ORDER = ["Winter", "Post-Monsoon", "Summer", "Monsoon", "Rainy"]
-
 WHO_GUIDELINES = {
     "pm25": {"annual": 5.0, "daily": 15.0, "label": "PM2.5"},
     "pm10": {"annual": 15.0, "daily": 45.0, "label": "PM10"},
@@ -71,8 +69,6 @@ def load_css():
             color: #C0C0C0;
             margin-top: 0.4rem;
         }
-        </style>
-        <style>
         div[data-testid="stDataFrame"] {
             padding-top: 0.25rem;
         }
@@ -92,6 +88,19 @@ def load_data():
 
 
 schools, district_summary, top_winter_reference, top_jump_reference = load_data()
+
+# Replace terminology in-memory for clearer dashboard display
+if "Type" in schools.columns:
+    schools["Type"] = schools["Type"].replace({"Unaided": "Private"})
+
+if "Type" in district_summary.columns:
+    district_summary["Type"] = district_summary["Type"].replace({"Unaided": "Private"})
+
+if "Type" in top_winter_reference.columns:
+    top_winter_reference["Type"] = top_winter_reference["Type"].replace({"Unaided": "Private"})
+
+if "Type" in top_jump_reference.columns:
+    top_jump_reference["Type"] = top_jump_reference["Type"].replace({"Unaided": "Private"})
 
 
 def format_indian_number(n):
@@ -196,22 +205,6 @@ def format_district_table(df, pollutant_label):
     return out
 
 
-def detect_column(df: pd.DataFrame, candidates: List[str]) -> Optional[str]:
-    lowered = {str(c).lower(): c for c in df.columns}
-
-    for cand in candidates:
-        if cand.lower() in lowered:
-            return lowered[cand.lower()]
-
-    for col in df.columns:
-        col_l = str(col).lower()
-        for cand in candidates:
-            if cand.lower() in col_l:
-                return col
-
-    return None
-
-
 def format_num(x, digits=1) -> str:
     if x is None or pd.isna(x):
         return "NA"
@@ -224,7 +217,13 @@ def format_num(x, digits=1) -> str:
 def ratio_text(value: float, guideline: float) -> str:
     if value is None or pd.isna(value) or guideline in [None, 0]:
         return "NA"
-    return f"{float(value) / guideline:.1f} times higher"
+
+    ratio = float(value) / guideline
+
+    if ratio >= 1:
+        return f"{ratio:.1f} times higher"
+    else:
+        return f"{ratio:.1f} of WHO guideline"
 
 
 def concern_label(value: float, annual_guideline: float) -> str:
@@ -374,7 +373,7 @@ def render_parent_summary(profile: dict):
         render_card(
             "Worst PM2.5",
             f"{format_num(pm25)} µg/m³",
-            f"{ratio_text(pm25, WHO_GUIDELINES['pm25']['annual'])} of WHO annual"
+            f"{ratio_text(pm25, WHO_GUIDELINES['pm25']['annual'])} than WHO annual guideline"
         )
 
     with row3[1]:
@@ -382,7 +381,7 @@ def render_parent_summary(profile: dict):
         render_card(
             "Worst PM10",
             f"{format_num(pm10)} µg/m³",
-            f"{ratio_text(pm10, WHO_GUIDELINES['pm10']['annual'])} of WHO annual"
+            f"{ratio_text(pm10, WHO_GUIDELINES['pm10']['annual'])} than WHO annual guideline"
         )
 
     with row3[2]:
@@ -390,7 +389,7 @@ def render_parent_summary(profile: dict):
         render_card(
             "Worst NO₂",
             f"{format_num(no2)} µg/m³",
-            f"{ratio_text(no2, WHO_GUIDELINES['no2']['annual'])} of WHO annual"
+            f"{ratio_text(no2, WHO_GUIDELINES['no2']['annual'])} than WHO annual guideline"
         )
 
     pm25 = profile.get("Worst PM2.5", np.nan)
@@ -587,8 +586,13 @@ def render_compare_schools_tab():
         return
 
     comparison_df = pd.DataFrame(comparison_rows)
-    st.write("Your selected schools")
-    st.dataframe(comparison_df, use_container_width=True, hide_index=True)
+
+    st.dataframe(
+        comparison_df,
+        use_container_width=True,
+        hide_index=True,
+        height=min(56 + 35 * (len(comparison_df) + 1), 260)
+    )
 
 
 def render_analyst_dashboard_tab(filters: dict):
