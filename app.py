@@ -4,7 +4,6 @@ import numpy as np
 from pathlib import Path
 import plotly.express as px
 
-
 st.set_page_config(
     page_title="Delhi School Air Pollution Dashboard",
     page_icon="🌫️",
@@ -15,24 +14,6 @@ st.title("Delhi School Air Pollution Dashboard")
 st.caption(
     "Estimated school exposure based on the nearest air-quality monitoring station in Delhi "
     "(season-wise station-linked exposure for 2025)"
-)
-
-st.markdown(
-    """
-    <style>
-    .red-asterisk {
-        color: #ff4b4b;
-        font-weight: 700;
-    }
-    .metric-note {
-        font-size: 0.9rem;
-        color: #b0b0b0;
-        margin-top: -0.25rem;
-        margin-bottom: 0.75rem;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
 )
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -150,9 +131,6 @@ def format_district_table(df, pollutant_label):
         "District": "District",
         "school_count": "Schools",
         "selected_pollutant_mean": f"Average {pollutant_label} exposure",
-        "avg_pm25": "Average PM2.5 exposure",
-        "avg_pm10": "Average PM10 exposure",
-        "avg_no2": "Average NO2 exposure",
         "avg_distance_km": "Average distance to station (km)",
         "estimated_students_affected": "Estimated students affected*"
     })
@@ -172,9 +150,6 @@ def format_district_table(df, pollutant_label):
     return out
 
 
-# -----------------------------
-# Sidebar filters
-# -----------------------------
 st.sidebar.header("Filter the dashboard")
 
 selected_season_label = st.sidebar.selectbox(
@@ -199,9 +174,6 @@ selected_type = st.sidebar.selectbox("School type", type_options)
 selected_confidence = st.sidebar.selectbox("Confidence level", confidence_options)
 
 
-# -----------------------------
-# Filtered schools
-# -----------------------------
 filtered_schools = add_selected_exposure_columns(schools, selected_season)
 
 if selected_district != "All districts":
@@ -224,9 +196,6 @@ selected_pollutant_col = {
 }[selected_pollutant]
 
 
-# -----------------------------
-# Summary stats
-# -----------------------------
 total_schools = len(schools)
 schools_in_view = len(filtered_schools)
 total_students_affected = estimate_students_affected(total_schools)
@@ -253,40 +222,36 @@ avg_distance = pd.to_numeric(filtered_schools["distance_km"], errors="coerce").m
 max_distance = pd.to_numeric(filtered_schools["distance_km"], errors="coerce").max()
 
 
-# -----------------------------
-# KPI cards
-# -----------------------------
 st.subheader("Overview")
 
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("Schools in this view", format_indian_number(schools_in_view))
-col2.metric("Districts covered", filtered_schools["District"].nunique())
-col3.metric("Monitoring stations linked", filtered_schools["nearest_station_id"].nunique())
-col4.metric(
-    f"Average {selected_pollutant} exposure ({selected_season_label})",
-    f"{selected_pollutant_mean:.1f} µg/m³" if pd.notna(selected_pollutant_mean) else "NA"
-)
+kpi_col1, kpi_col2 = st.columns(2)
 
-col5, col6, col7, col8 = st.columns(4)
-col5.metric("Average PM2.5 exposure", f"{avg_pm25:.1f} µg/m³" if pd.notna(avg_pm25) else "NA")
-col6.metric("Average PM10 exposure", f"{avg_pm10:.1f} µg/m³" if pd.notna(avg_pm10) else "NA")
-col7.metric("Average NO2 exposure", f"{avg_no2:.1f} µg/m³" if pd.notna(avg_no2) else "NA")
-col8.metric("Average station distance", f"{avg_distance:.2f} km" if pd.notna(avg_distance) else "NA")
+with kpi_col1:
+    st.info(
+        f"Schools in this view: {format_indian_number(schools_in_view)}\n\n"
+        f"Districts covered: {filtered_schools['District'].nunique()}\n\n"
+        f"Monitoring stations linked: {filtered_schools['nearest_station_id'].nunique()}\n\n"
+        f"Average {selected_pollutant} exposure ({selected_season_label}): "
+        f"{selected_pollutant_mean:.1f} µg/m³" if pd.notna(selected_pollutant_mean)
+        else f"Schools in this view: {format_indian_number(schools_in_view)}"
+    )
+
+with kpi_col2:
+    st.info(
+        f"Average PM2.5 exposure: {avg_pm25:.1f} µg/m³\n\n"
+        f"Average PM10 exposure: {avg_pm10:.1f} µg/m³\n\n"
+        f"Average NO2 exposure: {avg_no2:.1f} µg/m³\n\n"
+        f"Average station distance: {avg_distance:.2f} km\n\n"
+        f"Farthest school from station: {max_distance:.2f} km"
+    )
 
 student_col1, student_col2 = st.columns(2)
-student_col1.metric(
-    "Students Affected*",
-    format_indian_number(students_affected_in_view)
-)
-student_col2.metric(
-    "Students Affected (full dataset)",
-    format_indian_number(total_students_affected)
-)
+with student_col1:
+    st.info(f"Students Affected*: {format_indian_number(students_affected_in_view)}")
+with student_col2:
+    st.info(f"Students Affected (full dataset): {format_indian_number(total_students_affected)}")
 
-st.markdown(
-    '<div class="metric-note"><span class="red-asterisk">*</span> Estimated using average enrolment of 808 students per school.</div>',
-    unsafe_allow_html=True
-)
+st.caption("* Estimated using average enrolment of 808 students per school.")
 
 if filters_active:
     st.info(
@@ -303,12 +268,7 @@ else:
 
 st.markdown("---")
 
-
-# -----------------------------
-# Story highlights
-# -----------------------------
 st.subheader("Key highlights")
-
 st.markdown(
     f"""
 - **Selected season:** **{selected_season_label}**
@@ -320,10 +280,6 @@ st.markdown(
 """
 )
 
-
-# -----------------------------
-# District chart
-# -----------------------------
 st.subheader(f"District-level {selected_pollutant} exposure — {selected_season_label}")
 
 district_filtered = filtered_schools.groupby("District", dropna=False).agg(
@@ -351,17 +307,10 @@ fig_district = px.bar(
         "avg_distance_km": ":.2f"
     }
 )
-st.plotly_chart(fig_district, use_container_width=True)
+st.plotly_chart(fig_district, width="stretch")
 
-st.dataframe(
-    format_district_table(district_filtered, selected_pollutant),
-    use_container_width=True
-)
+st.table(format_district_table(district_filtered, selected_pollutant))
 
-
-# -----------------------------
-# Top schools by selected pollutant
-# -----------------------------
 st.subheader(f"Schools with the highest estimated {selected_pollutant} exposure — {selected_season_label}")
 
 top_selected_schools = (
@@ -370,19 +319,14 @@ top_selected_schools = (
     .head(15)
 )
 
-st.dataframe(
+st.table(
     format_school_table(
         top_selected_schools,
         selected_pollutant_col,
         f"Estimated {selected_pollutant} exposure ({selected_season_label})"
-    ),
-    use_container_width=True
+    )
 )
 
-
-# -----------------------------
-# Seasonal comparison tables
-# -----------------------------
 st.subheader("Winter burden comparison")
 
 winter_compare_cols = [
@@ -423,12 +367,8 @@ for col in ["PM2.5 Winter", "PM2.5 Monsoon", "Winter - Monsoon", "Winter / Monso
 winter_jump_table = winter_jump_table.reset_index(drop=True)
 winter_jump_table.index = winter_jump_table.index + 1
 
-st.dataframe(winter_jump_table, use_container_width=True)
+st.table(winter_jump_table)
 
-
-# -----------------------------
-# Monitoring gap schools
-# -----------------------------
 st.subheader("Schools farthest from a monitoring station")
 
 farthest_schools = (
@@ -454,23 +394,15 @@ gap_table["Distance to nearest station (km)"] = pd.to_numeric(
 gap_table = gap_table.reset_index(drop=True)
 gap_table.index = gap_table.index + 1
 
-st.dataframe(gap_table, use_container_width=True)
+st.table(gap_table)
 
-
-# -----------------------------
-# Reference seasonal tables
-# -----------------------------
 with st.expander("Reference tables: top winter and seasonal-jump schools"):
     st.markdown("**Top winter PM2.5 schools (citywide reference)**")
-    st.dataframe(top_winter_reference.head(15), use_container_width=True, hide_index=True)
+    st.table(top_winter_reference.head(15))
 
     st.markdown("**Top PM2.5 winter-vs-monsoon jump schools (citywide reference)**")
-    st.dataframe(top_jump_reference.head(15), use_container_width=True, hide_index=True)
+    st.table(top_jump_reference.head(15))
 
-
-# -----------------------------
-# Method note
-# -----------------------------
 st.markdown("---")
 st.subheader("How to read this dashboard")
 
@@ -481,29 +413,14 @@ st.info(
     "For this seasonal dashboard, station pollution values were aggregated by season and assigned as each school's estimated exposure proxy for that season."
 )
 
-st.markdown(
-    f"""
-<div style="
-    margin-top: 0.75rem;
-    padding: 0.9rem 1rem;
-    border-left: 4px solid #9aa0a6;
-    background-color: rgba(240, 242, 246, 0.6);
-    border-radius: 0.4rem;
-    font-size: 0.92rem;
-    line-height: 1.55;
-">
-<b>Dashboard note:</b> Student counts marked with <span style="color:#ff4b4b; font-weight:700;">*</span> are estimated using a Delhi-wide
-average enrolment of <b>{AVG_ENROLMENT_DELHI}</b> students per school. This figure comes from reporting
-that Delhi has <b>5,556 schools</b> serving <b>more than 44.9 lakh students</b>, which corresponds to an
-average enrolment of <b>{AVG_ENROLMENT_DELHI}</b> students per school.<br><br>
-
-<b>How we calculated it:</b><br>
-- Without filters: <b>Total schools in dashboard × {AVG_ENROLMENT_DELHI}</b><br>
-- With filters applied: <b>Schools in current filtered view × {AVG_ENROLMENT_DELHI}</b><br><br>
-
-This is an estimated student exposure proxy, not school-wise observed enrolment data.<br>
-<b>Source:</b> <a href="{ENROLMENT_SOURCE_URL}" target="_blank">ET Education</a>
-</div>
-""",
-    unsafe_allow_html=True
+st.info(
+    f"Dashboard note: Student counts marked with * are estimated using a Delhi-wide average enrolment of "
+    f"{AVG_ENROLMENT_DELHI} students per school. This figure comes from reporting that Delhi has 5,556 schools "
+    f"serving more than 44.9 lakh students, which corresponds to an average enrolment of {AVG_ENROLMENT_DELHI} "
+    f"students per school.\n\n"
+    f"How we calculated it:\n"
+    f"- Without filters: Total schools in dashboard × {AVG_ENROLMENT_DELHI}\n"
+    f"- With filters applied: Schools in current filtered view × {AVG_ENROLMENT_DELHI}\n\n"
+    f"This is an estimated student exposure proxy, not school-wise observed enrolment data.\n"
+    f"Source: {ENROLMENT_SOURCE_URL}"
 )
